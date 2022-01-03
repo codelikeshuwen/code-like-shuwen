@@ -1,0 +1,493 @@
+@font-face {
+  font-family: "Helvetica-Neue";
+  src: url("../fonts/Helvetica.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PDU-regular";
+  src: url("../fonts/PDU-regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "Arial", monospace;
+  margin: 0;
+}
+
+header img#logo {
+  position: fixed;
+  left: 100px;
+  top: 30px;
+  transform: rotate(-5deg);
+  width: 220px;
+  z-index: 1;
+}
+
+header button#hamburger {
+  background: none;
+  border: 0;
+  position: fixed;
+  right: 100px;
+  top: 30px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+button#hamburger svg {
+  width: 70px;
+  height: 70px;
+}
+
+button#hamburger path {
+  stroke: #2b3574;
+  stroke-width: 6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+h1 {
+  text-align: center;
+  color: #2b3574;
+  font-family: "PDU-regular", "Arial", sans-serif;
+  padding: 20px;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+.line_break {
+  border-color: #2b3574;
+  border-width: 2px;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  max-width: 50px;
+}
+p {
+  text-align: center;
+  font-size: 16px;
+  color: #2b3574;
+  font-family: "Helvetica-Neue", "Arial", sans-serif;
+}
+
+#empower p {
+  font-size: 18.4px;
+}
+.pink-bg {
+  background-image: url(/assets/img/pink-square-background.png);
+  background-color: #f9e8ea;
+  background-size: 13%;
+}
+mark {
+  background-color: pink;
+}
+em {
+  color: red;
+  display: inline-block;
+  transform: rotate(10deg);
+}
+h1 .rotate1 {
+  color: white;
+  background-color: #ef3742;
+  border: 2px solid #faced2;
+  display: inline-block;
+  transform: rotate(-10deg);
+  padding: 0px 7px;
+}
+h1 .rotate2 {
+  color: white;
+  background-color: #ef3742;
+  border: 2px solid #faced2;
+  display: inline-block;
+  transform: rotate(7deg);
+  padding: 0px 7px;
+}
+h1 .underline {
+  text-decoration: underline;
+  text-decoration-color: #ef4b54;
+}
+
+#offer img {
+  width: 135px;
+  height: auto;
+  position: absolute;
+  top: 397px;
+  left: 120px;
+}
+#offer h2 {
+  text-align: center;
+  padding: 36px;
+  font-size: 24px;
+  font-family: "PDU-regular", "Arial", sans-serif;
+  text-transform: uppercase;
+  color: #2b3574;
+}
+
+#offer div.boxes {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 10px 80px 100px 80px;
+}
+
+#offer div.box {
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#offer div.box a {
+  text-align: center;
+  display: block;
+  background-color: #2b3574;
+  color: white;
+  text-decoration: none;
+  font-size: 2.25rem;
+  padding: 5px 25px;
+  font-family: "PDU-regular", "Arial", sans-serif;
+  text-transform: uppercase;
+}
+
+#offer div.box p {
+  font-size: 16px;
+  color: #323e87;
+  font-family: "Helvetica-Neue", "Arial", sans-serif;
+}
+
+#featured img#featured-in {
+  width: 100px;
+  height: auto;
+  position: absolute;
+  top: 755px;
+  right: 120px;
+}
+
+#featured {
+  background-color: #f2f2f2;
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+#featured ul img {
+  width: 100%;
+  height: auto;
+  filter: grayscale(1);
+  opacity: 0.5;
+  max-height: 36px;
+  max-width: 88px;
+}
+
+#featured ul {
+  list-style: none;
+  display: flex;
+  gap: 80px;
+  justify-content: center;
+  margin: 0;
+}
+
+#featured li {
+  display: flex;
+  align-items: center;
+}
+
+#featured ul#two {
+  gap: 120px;
+}
+
+#event div.profilio-container {
+  display: flex;
+}
+
+#event img {
+  width: calc(100% / 3);
+}
+
+#platinum-box {
+  background-color: white;
+  border: 2px solid;
+  border-color: #2b3574;
+  width: 945px;
+  height: 200px;
+  transform: rotate(-1deg);
+  margin: -35px 160px 20px 240px;
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+}
+#platinum-box h2 {
+  font-family: "PDU-regular", "Arial", sans-serif;
+  text-transform: uppercase;
+  color: #2b3574;
+  size: 55px;
+  text-align: center;
+}
+
+.platinum-partners-logo {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.platinum-logo img {
+  display: flex;
+  width: 100%;
+  height: auto;
+  max-width: 130px;
+}
+
+#gold-box {
+  background-color: white;
+  border: 2px solid;
+  border-color: #ffeda3;
+  width: 1100px;
+  height: 200px;
+  transform: rotate(1deg);
+  margin: 35px 165px;
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+}
+
+#gold-box h3 {
+  font-family: "PDU-regular", "Arial", sans-serif;
+  text-transform: uppercase;
+  color: #ffeda3;
+  size: 40px;
+  text-align: center;
+}
+
+.gold-partners-logo {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+}
+.gold-logo img {
+  display: flex;
+  width: 100%;
+  height: auto;
+  max-width: 100px;
+}
+
+.semi-circle {
+  width: 135px;
+  height: auto;
+  position: absolute;
+  top: 190px;
+  left: -30px;
+}
+
+#silver-box h4 {
+  font-family: "PDU-regular", "Arial", sans-serif;
+  text-transform: uppercase;
+  color: rgba(38, 34, 98, 0.25);
+  size: 30px;
+  text-align: center;
+}
+
+#silver-box {
+  margin: 50px 165px;
+}
+
+#silver-box .logos {
+  width: 1100px;
+  height: 100px;
+  overflow: hidden;
+  position: relative;
+  outline: 10px solid red;
+  max-width: 100%;
+}
+
+#silver-box .logos .stage {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  transition: left 200ms ease;
+  width: calc((100% / 6) * 8);
+
+  /* animation-name: slide; */
+  animation-duration: 15s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+#silver-box .logo {
+  /*  */
+}
+
+#silver-box .logo img {
+  width: 100%;
+  height: auto;
+  max-width: 100px;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  9% {
+    transform: translateX(0);
+  }
+  11% {
+    transform: translateX(-16%);
+  }
+  19% {
+    transform: translateX(-16%);
+  }
+  21% {
+    transform: translateX(-32%);
+  }
+  29% {
+    transform: translateX(-32%);
+  }
+  31% {
+    transform: translateX(-48%);
+  }
+  39% {
+    transform: translateX(-48%);
+  }
+  41% {
+    transform: translateX(-64%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+#partner-with-us {
+  height: 250px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+#partner-with-us h2 {
+  text-align: center;
+  font-size: 28px;
+  font-family: "PDU-regular", "Arial", sans-serif;
+  text-transform: uppercase;
+  color: #2b3574;
+  margin: 0;
+}
+
+#find p {
+  font-size: 16px;
+  font-family: "PDU-regular", "Arial", sans-serif;
+  text-transform: uppercase;
+  color: white;
+  padding: 0px 25px;
+}
+
+button#find {
+  background: #2b3574;
+  border-radius: 300px;
+  margin: 10px;
+}
+
+.eye {
+  width: 100px;
+  height: auto;
+  position: absolute;
+  bottom: -18px;
+  left: 83%;
+  transform: rotate(10deg);
+}
+
+footer {
+  height: 375px;
+  background-color: #2b3574;
+  color: white;
+  padding-top: 30px;
+}
+
+footer .big-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-left: 80px;
+  margin-right: 80px;
+}
+footer .left-box {
+  flex-direction: column;
+  display: flex;
+  color: white;
+}
+
+.left-box h4 {
+  font-size: 16px;
+  font-family: "PDU-regular", "Arial", sans-serif;
+  text-transform: uppercase;
+  color: white;
+  margin: 0;
+}
+
+.left-box h5 {
+  font-size: 11.2px;
+  font-family: "Helvetica-Neue", "Arial", sans-serif;
+}
+
+.right-box {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+.right-box h4 {
+  font-family: "PDU-regular", "Arial", sans-serif;
+  font-size: 32px;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+.right-box span {
+  color: #ef3742;
+}
+
+.right-box h5 {
+  font-family: "Helvetica-Neue", "Arial", sans-serif;
+  font-size: 16px;
+}
+
+.copyright {
+  display: flex;
+  align-items: baseline;
+  background-color: red;
+  margin-top: 40px;
+}
+
+.copyright p {
+  font-size: 11.2px;
+  color: white;
+  font-family: "Helvetica-Neue", "Arial", sans-serif;
+  padding: 0px 15px 15px 0px;
+}
+
+.copyright a {
+  font-size: 11.2px;
+  color: white;
+  font-family: "Helvetica-Neue", "Arial", sans-serif;
+  padding: 0px 15px 15px 0px;
+}
+
+/* #partners #gold .logo img {} */
+/* #partners #platinum .logo img {} */
+/*
+h2 {
+  color: black;
+}
+
+#offers h2,
+#products h2 {
+  color: red;
+}
+
+h2.special {
+  color: yellow;
+}
+*/
