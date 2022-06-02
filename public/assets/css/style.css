@@ -17,12 +17,15 @@ body {
   margin: 0;
 }
 
+header {
+  padding-bottom: 128px;
+}
 header img#logo {
   position: fixed;
   left: 100px;
   top: 30px;
   transform: rotate(-5deg);
-  width: 220px;
+  width: 270px;
   z-index: 1;
 }
 
@@ -48,13 +51,28 @@ button#hamburger path {
   stroke-linejoin: round;
 }
 
-h1 {
+#empower {
+  display: flex;
+  justify-content: center;
+  margin-bottom: -50px;
+}
+
+#empower .liner {
+  display: flex;
+  max-width: 900px;
+  box-sizing: border-box;
+}
+
+#empower h1 {
   text-align: center;
   color: #2b3574;
   font-family: "PDU-regular", "Arial", sans-serif;
   padding: 20px;
-  font-size: 40px;
+  font-size: 48px;
   text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+  font-weight: normal;
 }
 
 .line_break {
@@ -73,6 +91,12 @@ p {
 
 #empower p {
   font-size: 18.4px;
+}
+
+#empower img {
+  border: solid 2px #262262;
+  position: relative;
+  left: 10%;
 }
 .pink-bg {
   background-image: url(/assets/img/pink-square-background.png);
@@ -108,11 +132,15 @@ h1 .underline {
   text-decoration-color: #ef4b54;
 }
 
+#offer {
+  position: relative;
+}
+
 #offer img {
   width: 135px;
   height: auto;
   position: absolute;
-  top: 397px;
+  top: -50px;
   left: 120px;
 }
 #offer h2 {
@@ -160,7 +188,7 @@ h1 .underline {
   width: 100px;
   height: auto;
   position: absolute;
-  top: 755px;
+  top: -50px;
   right: 120px;
 }
 
@@ -170,6 +198,7 @@ h1 .underline {
   display: flex;
   flex-direction: column;
   gap: 50px;
+  position: relative;
 }
 
 #featured ul img {
@@ -206,6 +235,11 @@ h1 .underline {
   width: calc(100% / 3);
 }
 
+#partners {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 #platinum-box {
   background-color: white;
   border: 2px solid;
@@ -296,7 +330,6 @@ h1 .underline {
   height: 100px;
   overflow: hidden;
   position: relative;
-  outline: 10px solid red;
   max-width: 100%;
 }
 
@@ -321,9 +354,9 @@ h1 .underline {
 }
 
 #silver-box .logo img {
-  width: 100%;
-  height: auto;
-  max-width: 100px;
+  width: 80px;
+  height: 80px;
+  object-fit: scale-down;
 }
 
 @keyframes slide {
@@ -401,36 +434,57 @@ button#find {
 }
 
 footer {
-  height: 375px;
   background-color: #2b3574;
   color: white;
-  padding-top: 30px;
+  padding-top: 80px;
+  display: flex;
+  justify-content: center;
+}
+
+footer .container {
+  max-width: 1140px;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 50px;
 }
 
 footer .big-box {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
-  margin-left: 80px;
-  margin-right: 80px;
 }
 footer .left-box {
   flex-direction: column;
   display: flex;
   color: white;
+  max-width: 40%;
 }
 
 .left-box h4 {
   font-size: 16px;
   font-family: "PDU-regular", "Arial", sans-serif;
+  font-weight: normal;
   text-transform: uppercase;
   color: white;
   margin: 0;
+  padding-bottom: 8px;
 }
 
 .left-box h5 {
   font-size: 11.2px;
   font-family: "Helvetica-Neue", "Arial", sans-serif;
+  margin: 0;
+  font-weight: normal;
+  padding-bottom: 16px;
+}
+
+.social {
+  display: flex;
+  gap: 15px;
+  padding-top: 15px;
+}
+
+.social img {
+  width: 32px;
 }
 
 .right-box {
@@ -442,7 +496,8 @@ footer .left-box {
   font-family: "PDU-regular", "Arial", sans-serif;
   font-size: 32px;
   text-transform: uppercase;
-  margin-bottom: 0;
+  padding-bottom: 8px;
+  margin: 0;
 }
 
 .right-box span {
@@ -452,29 +507,118 @@ footer .left-box {
 .right-box h5 {
   font-family: "Helvetica-Neue", "Arial", sans-serif;
   font-size: 16px;
+  margin: 0;
+}
+
+.signup-boxes {
+  display: flex;
+  padding-top: 25px;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.signup-boxes input {
+  font-family: "Helvetica-Neue", "Arial", sans-serif;
+  font-size: 16px;
+  padding: 0px 10px;
+  height: 41px;
+  box-sizing: border-box;
+  border-radius: 3px 0 0 3px;
+  border: 1px solid #abb0b2;
+}
+
+.signup-boxes select {
+  font-size: 16px;
+  height: 41px;
+  box-sizing: border-box;
+  border: 1px solid #abb0b2;
+}
+
+.signup-boxes button {
+  display: flex;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.signup-boxes button img {
+  width: 60px;
+  height: 45px;
 }
 
 .copyright {
   display: flex;
-  align-items: baseline;
-  background-color: red;
-  margin-top: 40px;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 15px;
+  padding-bottom: 30px;
+  padding-top: 20px;
 }
 
 .copyright p {
-  font-size: 11.2px;
+  font-size: 12.8px;
   color: white;
   font-family: "Helvetica-Neue", "Arial", sans-serif;
-  padding: 0px 15px 15px 0px;
+  margin: 0;
 }
 
 .copyright a {
-  font-size: 11.2px;
+  font-size: 12.8px;
   color: white;
   font-family: "Helvetica-Neue", "Arial", sans-serif;
-  padding: 0px 15px 15px 0px;
 }
 
+#modal {
+  background-color: #2b3574;
+  position: fixed;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  transition: top 900ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#modal.open {
+  top: 0;
+}
+
+#modal.closed {
+  top: 100%;
+}
+
+.menu-list ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  font-size: 76.6px;
+  font-family: "PDU-regular", "Arial", sans-serif;
+  color: #faced3;
+  padding: 100px;
+  padding-bottom: 30px;
+  margin-bottom: 0px;
+}
+
+.menu-list ul li a {
+  font-size: 76.6px;
+  font-family: "PDU-regular", "Arial", sans-serif;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+.social-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding-bottom: 200px;
+}
+
+.social-list img {
+  width: 32px;
+  height: 32px;
+}
 /* #partners #gold .logo img {} */
 /* #partners #platinum .logo img {} */
 /*
