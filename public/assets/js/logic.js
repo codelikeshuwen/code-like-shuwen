@@ -1,10 +1,7 @@
 function onPageLoad() {
-  console.log("onPageLoad");
   setupHamburgerMenu();
   setupEmailSubscriptionForm();
 }
-
-function modalOpen() {}
 
 function setupEmailSubscriptionForm() {
   console.log("Email form ready");
@@ -23,15 +20,25 @@ function getInputValue() {
 
   //sendToServer(email, state);
 }
-``;
 
 function setupHamburgerMenu() {
-  console.log("Shuwen is beautiful");
-  document.querySelector("button#hamburger").onclick = openHamburgerMenu;
+  document.querySelector("button#hamburger").onclick = toggleHamburgerMenu;
 }
 
-function openHamburgerMenu() {
-  console.log("openHamburgerMenu()");
+let menuIsOpen = false;
+
+function toggleHamburgerMenu() {
+  const button = document.querySelector("button#hamburger");
+
+  if (menuIsOpen) {
+    button.classList.remove("close-icon");
+    button.classList.add("hamburger-icon");
+  } else {
+    button.classList.remove("hamburger-icon");
+    button.classList.add("close-icon");
+  }
+
+  menuIsOpen = !menuIsOpen;
 }
 
 document.addEventListener("DOMContentLoaded", onPageLoad);

@@ -19,13 +19,28 @@
     <header>
       <img id="logo" src="/assets/img/CLG_Logo.png" alt="Code like a girl" />
 
-      <button id="hamburger">
-        <svg viewBox="0 0 100 100">
-          <path d="M30,37 L70,37"></path>
-          <path d="M30,50 L70,50 Z"></path>
-          <path d="M30,63 L70,63"></path>
-        </svg>
-      </button>
+      <div class="menu">
+        <ul id="overlay-menu">
+          <li><a class="menuItem" href="#">Home</a></li>
+          <li><a class="menuItem" href="#">Profile</a></li>
+          <li><a class="menuItem" href="#">About</a></li>
+          <li><a class="menuItem" href="#">Contacts</a></li>
+        </ul>
+
+        <button id="hamburger" class="hamburger-icon">
+          <svg viewBox="0 0 100 100" id="top-line">
+            <path d="M30,37 L70,37"></path>
+          </svg>
+
+          <svg viewBox="0 0 100 100" id="middle-line">
+            <path d="M30,50 L70,50 Z"></path>
+          </svg>
+
+          <svg viewBox="0 0 100 100" id="bottom-line">
+            <path d="M30,63 L70,63"></path>
+          </svg>
+        </button>
+      </div>
     </header>
 
     <main>
