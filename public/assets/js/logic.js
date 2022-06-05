@@ -28,14 +28,22 @@ function setupHamburgerMenu() {
 let menuIsOpen = false;
 
 function toggleHamburgerMenu() {
+  console.log("Hamburger menu ready");
   const button = document.querySelector("button#hamburger");
+  const overlay = document.querySelector("#overlay");
 
   if (menuIsOpen) {
+    // the menu is shown
     button.classList.remove("close-icon");
     button.classList.add("hamburger-icon");
+    overlay.classList.remove("show");
+    overlay.classList.add("hide");
   } else {
+    // the menu is not yet open
     button.classList.remove("hamburger-icon");
     button.classList.add("close-icon");
+    overlay.classList.remove("hide");
+    overlay.classList.add("show");
   }
 
   menuIsOpen = !menuIsOpen;
