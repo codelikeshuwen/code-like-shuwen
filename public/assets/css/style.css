@@ -18,6 +18,28 @@
   font-style: normal;
 }
 
+/* @keyframes MoveUpDown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+} */
+
+@keyframes MoveUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 body {
   font-family: "Arial", monospace;
   margin: 0;
@@ -44,6 +66,25 @@ header img#logo {
   color: white;
   transition: all 400ms ease;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#overlay li {
+  display: flex;
+  justify-content: center;
+}
+
+#overlay li a {
+  color: white;
+  font-size: 5vh;
+  text-decoration: none;
+  display: flex;
+  font-family: "PDU-regular";
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 #menu #overlay.hide {
@@ -147,7 +188,10 @@ p {
   border: solid 2px #262262;
   position: relative;
   left: 10%;
+  z-index: 99;
+  filter: drop-shadow(20px 20px 0px #262262);
 }
+
 .pink-bg {
   background-image: url(/assets/img/pink-square-background.png);
   background-color: #f9e8ea;
@@ -192,6 +236,7 @@ h1 .underline {
   position: absolute;
   top: -50px;
   left: 120px;
+  animation: MoveUpDown 2s linear infinite;
 }
 #offer h2 {
   text-align: center;
@@ -240,6 +285,17 @@ h1 .underline {
   position: absolute;
   top: -50px;
   right: 120px;
+  animation: MoveUpDown 2s linear infinite;
+}
+
+@keyframes MoveUpDown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 #featured {
