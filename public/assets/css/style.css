@@ -33,6 +33,7 @@
 body {
   font-family: "Arial", monospace;
   margin: 0;
+  overflow-x: hidden;
 }
 
 header {
@@ -140,8 +141,13 @@ button#hamburger.close-icon path {
 
 #empower .liner {
   display: flex;
-  max-width: 900px;
+  max-width: 1060px;
   box-sizing: border-box;
+  gap: 6%;
+}
+
+#empower .left-text {
+  max-width: 690px;
 }
 
 #empower h1 {
@@ -174,22 +180,32 @@ p {
   font-size: 18.4px;
 }
 
-#sprite-image {
+#sprite-container {
   width: 320px;
   height: 512px;
-  background: url(/assets/img/sprite.jpg) left center;
-  background-size: cover;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+  filter: drop-shadow(20px 20px 0px #262262);
+  z-index: 99;
+  border: solid 2px #262262;
+  left: 5%;
+}
+
+#sprite-container img {
+  left: 0;
+  top: 0;
+  width: 1100%;
+  height: 512px;
   animation: play 1.3s steps(11) infinite;
   animation-direction: alternate-reverse;
-  border: solid 2px #262262;
-  position: relative;
-  z-index: 99;
-  filter: drop-shadow(20px 20px 0px #262262);
+
+  position: absolute;
 }
 
 @keyframes play {
   100% {
-    background-position: -3520px;
+    left: -1100%;
   }
 }
 
