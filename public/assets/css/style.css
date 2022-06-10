@@ -34,6 +34,13 @@ body {
   font-family: "Arial", monospace;
   margin: 0;
   overflow-x: hidden;
+  cursor: url("https://s3.ap-southeast-2.amazonaws.com/codelikeagirl.org/fonts/cursor.png"),
+    auto;
+}
+
+a {
+  cursor: url(https://s3-ap-southeast-2.amazonaws.com/codelikeagirl.org/fonts/click.png),
+    auto;
 }
 
 header {
@@ -52,7 +59,7 @@ header img#logo {
   position: fixed;
   height: 100%;
   width: 100%;
-  z-index: 1;
+  z-index: 99;
   background-color: var(--dark-blue);
   color: white;
   transition: all 400ms ease;
@@ -67,9 +74,39 @@ header img#logo {
   justify-content: center;
 }
 
+#overlay li:hover {
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
 #overlay li a {
   color: white;
-  font-size: 5vh;
+  font-size: 8vh;
   text-decoration: none;
   display: flex;
   font-family: "PDU-regular";
@@ -93,7 +130,7 @@ button#hamburger {
   right: 3%;
   top: 2.5%;
   cursor: pointer;
-  z-index: 99;
+  z-index: 101;
   width: 70px;
   height: 70px;
 }
@@ -147,7 +184,7 @@ button#hamburger.close-icon path {
 }
 
 #empower .left-text {
-  max-width: 690px;
+  max-width: 613px;
 }
 
 #empower h1 {
@@ -187,7 +224,7 @@ p {
   position: relative;
   overflow: hidden;
   filter: drop-shadow(20px 20px 0px #262262);
-  z-index: 99;
+  z-index: 2;
   border: solid 2px #262262;
   left: 5%;
 }
@@ -383,7 +420,7 @@ h1 .underline {
   text-align: center;
 }
 
-.platinum-partners-logo {
+.platinum-partners-container {
   display: flex;
   justify-content: center;
   gap: 20px;
@@ -416,11 +453,12 @@ h1 .underline {
   text-align: center;
 }
 
-.gold-partners-logo {
+.gold-partners-container {
   display: flex;
   justify-content: center;
   gap: 80px;
 }
+
 .gold-logo img {
   display: flex;
   width: 100%;
@@ -444,8 +482,12 @@ h1 .underline {
   text-align: center;
 }
 
-#silver-box {
-  margin: 50px 165px;
+.silver-partners-container {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  box-sizing: border-box;
+  padding: 4vh 0;
 }
 
 #silver-box .logos {
@@ -456,63 +498,16 @@ h1 .underline {
   max-width: 100%;
 }
 
-#silver-box .logos .stage {
-  position: absolute;
-  left: 0;
-  top: 0;
+.silver-partners-container {
   display: flex;
   justify-content: center;
-  gap: 60px;
-  transition: left 200ms ease;
-  width: calc((100% / 6) * 8);
-
-  /* animation-name: slide; */
-  animation-duration: 15s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-
-#silver-box .logo {
-  /*  */
+  gap: 80px;
 }
 
 #silver-box .logo img {
   width: 80px;
   height: 80px;
   object-fit: scale-down;
-}
-
-@keyframes slide {
-  0% {
-    transform: translateX(0);
-  }
-  9% {
-    transform: translateX(0);
-  }
-  11% {
-    transform: translateX(-16%);
-  }
-  19% {
-    transform: translateX(-16%);
-  }
-  21% {
-    transform: translateX(-32%);
-  }
-  29% {
-    transform: translateX(-32%);
-  }
-  31% {
-    transform: translateX(-48%);
-  }
-  39% {
-    transform: translateX(-48%);
-  }
-  41% {
-    transform: translateX(-64%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
 }
 
 #partner-with-us {
