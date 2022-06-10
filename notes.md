@@ -33,10 +33,30 @@ review of how to center the text:
 CSS effect : drop shadow & box shadow
 Animation effect: keyframes MoveUpDown
 
+7th June
+
+be careful with the parent
+
+git rest --hard (go back to last commit)
+shift + zz = quit
+
 Next:
-change the cursor on the links
-investigae the carosell
-change the turning picture
+
+investigate the carosell
 make the stroke of hamburger bigger
 add github loge on the page
-make the website alive
+
+10th June:
+
+- changed the cursor on the links
+- aligned the silver box logos
+- make the menu list shake when hover
+- replaced the logo to codelikeshuwen
+
+Next:
+
+investigate the carosell
+make the hamburger bigger
+add github & linked in loge on the page
+make the website responsive
+solve the problem of overflow
